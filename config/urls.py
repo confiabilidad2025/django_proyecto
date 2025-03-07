@@ -11,23 +11,23 @@ from ..django_stats import DjangoStatsDashboard
 
 site = Site(
     title="CRUD 101 Demo",
-    primary_color='#3949ab',
-    secondary_color='#5c6bc0',
+    primary_color="#3949ab",
+    secondary_color="#5c6bc0",
     viewsets=[
         Application(
-            title='Dashboard',
+            title="Dashboard",
             viewsets=[
                 oilDashboard,
                 stocksDashboard,
                 DjangoStatsDashboard(),
                 dashboard,
-            ]
+            ],
         ),
         Admin(),
-    ]
+    ],
 )
 
 urlpatterns = [
-    path('', site.urls),
-    path('accounts/', AuthViewset().urls),
+    path("", site.urls),
+    path("accounts/", AuthViewset().urls),
 ]
