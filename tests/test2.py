@@ -31,10 +31,7 @@ app.layout = dbc.Container(fluid=True, style={'fontFamily': 'Arial Narrow', 'pad
         dbc.Tab(label='Vibración', children=[
             dbc.Card([
                 dbc.CardBody([
-                    
-
                     html.H3('Registro de Vibración GRUPO 1', className='text-center text-danger'),
-
                     dbc.ButtonGroup([
                         dbc.Button('Eje X', color='primary'),
                         dbc.Button('Eje Y', color='secondary'),
@@ -43,8 +40,7 @@ app.layout = dbc.Container(fluid=True, style={'fontFamily': 'Arial Narrow', 'pad
 
                     dbc.Row([
                         dbc.Col([
-                            #dbc.Button('EJE X', color='info', className='rounded-circle', style={'width': '80px', 'height': '80px'})
-                            
+                            #dbc.Button('EJE X', color='info', className='rounded-circle', style={'width': '80px', 'height': '80px'})                            
                             html.Div('AZUL EJE "X"', className='mt-2 text-info text-center')
                         ], width=2),
 
