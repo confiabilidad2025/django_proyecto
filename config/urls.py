@@ -1,7 +1,9 @@
-from django.urls import path
+from django.urls import path, include
 from viewflow.contrib.admin import Admin
 from viewflow.contrib.auth import AuthViewset
 from viewflow.urls import Site, Application
+
+
 
 from ..oilngas.dashboard import dashboard as oilDashboard
 from ..stocks.dashboard import dashboard as stocksDashboard
@@ -30,4 +32,5 @@ site = Site(
 urlpatterns = [
     path("", site.urls),
     path("accounts/", AuthViewset().urls),
+    #path('', include('dash_integration.urls')),
 ]
