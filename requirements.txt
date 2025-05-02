@@ -107,7 +107,7 @@ pathspec==0.12.1
 peewee==3.17.9
 pillow==11.1.0
 platformdirs==4.3.6
-plotly==6.0.0
+plotly==5.18.0
 pluggy==1.5.0
 prompt_toolkit==3.0.50
 psutil==7.0.0
@@ -128,7 +128,7 @@ pytest-django==4.10.0
 python-coveralls==2.9.3
 python-dateutil==2.9.0.post0
 python-decouple==3.4
-pytz==2021.1
+pytz==2022.7
 pywin32==309
 pywin32-ctypes==0.2.3
 PyYAML==6.0.2

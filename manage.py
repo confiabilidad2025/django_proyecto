@@ -5,7 +5,7 @@ import sys
 sys.path[0] = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 if __name__ == "__main__":
-    os.environ.setdefault("DJANGO_SETTINGS_MODULE", "dashboard.config.settings")
+    os.environ.setdefault("DJANGO_SETTINGS_MODULE", "config.settings")
     try:
         from django.core.management import execute_from_command_line
     except ImportError as exc:

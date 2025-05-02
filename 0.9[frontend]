@@ -1,0 +1,22 @@
+Collecting viewflow
+  Using cached viewflow-0.1.0-py3-none-any.whl.metadata (17 kB)
+Collecting apache-airflow==2.1.1 (from viewflow)
+  Using cached apache_airflow-2.1.1-py3-none-any.whl.metadata (85 kB)
+Collecting apache-airflow-providers-postgres<3.0.0,>=2.0.0 (from viewflow)
+  Using cached apache_airflow_providers_postgres-2.4.0-py3-none-any.whl.metadata (8.6 kB)
+Collecting boto3<2.0.0,>=1.14.34 (from viewflow)
+  Using cached boto3-1.37.31-py3-none-any.whl.metadata (6.7 kB)
+Collecting fsspec<0.9.0,>=0.8.0 (from viewflow)
+  Using cached fsspec-0.8.7-py3-none-any.whl.metadata (5.1 kB)
+Collecting networkx<3.0,>=2.5 (from viewflow)
+  Using cached networkx-2.8.8-py3-none-any.whl.metadata (5.1 kB)
+Collecting numpy<2.0.0,>=1.19.1 (from viewflow)
+  Using cached numpy-1.26.4.tar.gz (15.8 MB)
+  Installing build dependencies: started
+  Installing build dependencies: finished with status 'done'
+  Getting requirements to build wheel: started
+  Getting requirements to build wheel: finished with status 'done'
+  Installing backend dependencies: started
+  Installing backend dependencies: finished with status 'done'
+  Preparing metadata (pyproject.toml): started
+  Preparing metadata (pyproject.toml): finished with status 'error'

@@ -31,7 +31,13 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     "django_extensions",    
     "viewflow",
-    #"dash_integration",
+    'django_plotly_dash.apps.DjangoPlotlyDashConfig',
+    'mi_dashboard',
+    'grafico_ingresos',
+    'dashboardOts',
+    
+    
+
 ]
 
 MIDDLEWARE = [
@@ -41,9 +47,11 @@ MIDDLEWARE = [
     "django.middleware.csrf.CsrfViewMiddleware",
     "django.contrib.auth.middleware.AuthenticationMiddleware",
     "django.contrib.messages.middleware.MessageMiddleware",
+    'django_plotly_dash.middleware.BaseMiddleware',
+    'django_plotly_dash.middleware.ExternalRedirectionMiddleware',
 ]
 
-ROOT_URLCONF = "dashboard.config.urls"
+ROOT_URLCONF = "config.urls"
 
 TEMPLATES = [
     {
@@ -61,7 +69,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = "dashboard.config.wsgi.application"
+WSGI_APPLICATION = "config.wsgi.application"
 
 # Database
 # https://docs.djangoproject.com/en/2.1/ref/settings/#databases
@@ -95,3 +103,6 @@ STATIC_URL = "/static/"
 
 MEDIA_URL = "/media/"
 MEDIA_ROOT = BASE_DIR.parent.parent / ".media"
+
+#DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+X_FRAME_OPTIONS = 'SAMEORIGIN'
