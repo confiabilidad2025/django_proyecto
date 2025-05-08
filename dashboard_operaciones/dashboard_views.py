@@ -4,7 +4,7 @@ from dash import html
 class DashboardOperaciones(Dashboard):
     title = "Dashboard Operaciones"
     label = "operaciones"
-    icon = ""
+    icon = "bar_chart"
     layout = html.Div([
         html.Iframe(
             src="http://zona1.miteleferico.bo:8090/operaciones",

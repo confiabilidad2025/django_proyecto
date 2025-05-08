@@ -35,6 +35,8 @@ INSTALLED_APPS = [
     'mi_dashboard',
     'grafico_ingresos',
     'dashboardOts',
+    'rest_framework',
+    'authentication',
     
     
 
@@ -106,3 +108,17 @@ MEDIA_ROOT = BASE_DIR.parent.parent / ".media"
 
 #DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 X_FRAME_OPTIONS = 'SAMEORIGIN'
+
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': [
+        'authentication.authentication.ExternalJWTAuthentication',
+    ],
+    'DEFAULT_PERMISSION_CLASSES': [
+        'rest_framework.permissions.IsAuthenticated', # O los permisos que necesites por defecto
+    ]
+    # ... otras configuraciones de REST_FRAMEWORK
+}
+SESSION_ENGINE = 'django.contrib.sessions.backends.db'
+# SESSION_COOKIE_SECURE = True  # Considerar para producción
+# SESSION_COOKIE_HTTPONLY = True # Considerar para producción
+LOGOUT_REDIRECT_URL = '/'  # Redirige a la raíz, donde está tu login personalizado

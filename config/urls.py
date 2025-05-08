@@ -4,6 +4,7 @@ from viewflow.contrib.auth import AuthViewset
 from viewflow.urls import Site, Application
 from django_plotly_dash.views import routes
 
+from authentication.views import login_view
 from grafico_ingresos.dashboard_viewset import GraficoIframeDashboard
 from mi_dashboard.dashboard_viewset import ascensoresDashboard
 from django_plotly_dash.views import routes
@@ -16,6 +17,7 @@ from indicadores_torres.dashboard_views import IndicadoresTorres
 from indicadores_vehiculos.dashboard_views import IndicadoresVehiculos
 from indicadores_avance.dashboard_views import IndicadoresAvance
 from indicadores_carrotensor.dashboard_views import IndicadoresCarroTensor
+
 site = Site(
     title="Mantenimiento",
     primary_color="#3949ab",
@@ -42,7 +44,10 @@ site = Site(
 )
 
 urlpatterns = [
-    path("", site.urls),
+    path("", login_view, name='root'),
+    path('auth/', include('authentication.urls')), # Añade esta línea
     path("accounts/", AuthViewset().urls),
     path('dash/', routes),
+    path("", site.urls),
+    
 ]
