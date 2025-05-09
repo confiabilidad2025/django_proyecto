@@ -40,7 +40,8 @@ def login_view(request):
                     return render(request, 'authentication/login.html', {'form': form, 'error_message': 'Inicio de sesión fallido: no se recibió token o información del usuario.'})
 
             except requests.exceptions.RequestException as e:
-                return render(request, 'authentication/login.html', {'form': form, 'error_message': f'Error al conectar con la API externa: {e}'})
+                # Aquí modificamos el mensaje de error para el usuario
+                return render(request, 'authentication/login.html', {'form': form, 'error_message': 'Usuario o contraseña incorrectos'})
             except ValueError:
                 return render(request, 'authentication/login.html', {'form': form, 'error_message': 'Respuesta inválida de la API externa.'})
         else:

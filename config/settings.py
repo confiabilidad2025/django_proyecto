@@ -122,3 +122,4 @@ SESSION_ENGINE = 'django.contrib.sessions.backends.db'
 # SESSION_COOKIE_SECURE = True  # Considerar para producción
 # SESSION_COOKIE_HTTPONLY = True # Considerar para producción
 LOGOUT_REDIRECT_URL = '/'  # Redirige a la raíz, donde está tu login personalizado
+
